@@ -1,5 +1,5 @@
 #!/bin/bash
-souce ./common_script.sh
+source ./common_script.sh
 app_name="frontend"
 
 check_root
@@ -35,4 +35,5 @@ VALIDATE $? "copying nginx.conf file"
 
 systemctl restart nginx &>>$LOGS_FILE
 VALIDATE $? "restarting nginx service"
-# satish marchant
+
+print_time
