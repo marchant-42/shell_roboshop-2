@@ -3,6 +3,7 @@ source ./common_script.sh
 app_name=mongodb
 
 check_root
+
 cp mongo.repo /etc/yum.repos.d/mongo.repo
 VALIDATE $? "copying mongo.repo"
 
