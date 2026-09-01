@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./commonscript.sh
+source ./common_script.sh
 app_name=mongodb
 
 check_root
