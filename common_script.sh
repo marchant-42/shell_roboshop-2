@@ -8,7 +8,7 @@ N="\e[0m"
 LOGS_FOLDER="/var/log/roboshop-logs"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOGS_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
-
+SCRIPT_DIR=$PWD # script directory where the script is running from
 mkdir -p $LOGS_FOLDER
 echo "script statrted excuted at : $(date)" | tee -a $LOGS_FILE
 
