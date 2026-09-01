@@ -21,6 +21,6 @@ then
 else
     echo -e "Data is alredy loaded ...$Y SKIPPING $N" 
 fi
-
+print_time
 #mongosh --host mongodb.satishdevops.shop --eval 'db.getMongo().getDBNames().indexOf("catalogue(db name)")'
 #out put is 1 it means db is exists, other wise not
