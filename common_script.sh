@@ -72,9 +72,3 @@ systemd_setup(){
     systemctl start $app_name
     VALIDATE $? "starting $app_name service"
 }
-
-print_time(){
-    END_TIME=$(date +%s)
-    TOTAL_TIME=$(($END_TIME-$START_TIME))
-    echo -e "script execution completed successfully, $Y time taken: $TOTAL_TIME seconds $N" | tee -a $LOGS_FILE 
-}
