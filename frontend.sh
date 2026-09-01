@@ -1,32 +1,8 @@
 #!/bin/bash
+souce ./common_script.sh
+app_name="frontend"
 
-USERID=$(id -u)
-R="\e[31m"
-G="\e[32m"
-Y="\e[33m"
-N="\e[0m"
-LOGS_FOLDER="/var/log/roboshop-logs"
-SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
-LOGS_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
-
-mkdir -p $LOGS_FOLDER
-echo "script statrted excuted at : $(date)" | tee -a $LOGS_FILE
-if [ $USERID -ne 0 ]
-then
-    echo -e "$R Error : only root user can run this script $N" | tee -a $LOGS_FILE
-    exit 1
-else 
-    echo "you are running with root access" | tee -a $LOGS_FILE
-fi
-VALIDATE(){
-    if [ $1 -eq 0 ]
-    then
-        echo -e " $2 is ...$G success $N " | tee -a $LOGS_FILE
-    else
-        echo -e "$2 is $R failed $N" | tee -a $LOGS_FILE
-        exit 1
-    fi
-}
+check_root
 
 dnf module disable nginx -y &>>$LOGS_FILE
 VALIDATE $? "disabling nginx"
