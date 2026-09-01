@@ -77,5 +77,5 @@ systemd_setup(){
 print_time(){
     END_TIME=$(date +%s)
     TOTAL_TIME=$(($END_TIME-$START_TIME))
-    echo -e "script execution completed successfully, $Y time taken: $TOTAL_TIME seconds $N"
+    echo -e "script execution completed successfully, $Y time taken: $TOTAL_TIME seconds $N" | tee -a $LOGS_FILE 
 }
