@@ -4,7 +4,7 @@
 AMI_ID="ami-0220d79f3f480ecf5"
 SG_ID="sg-0d25319b661cf812b"
 INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalog" "user" "cart" "shipping" "payment" "dispatch" "frontend")
-ZONE_ID="Z06595273AQ0EA2LJG30D"
+ZONE_ID="Z09783873O434Q2DYUCO6"
 DOMAIN_NAME="satishdevops.shop" 
 
 
